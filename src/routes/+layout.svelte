@@ -1,6 +1,7 @@
 <script>
     import { onNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
+	import Header from '$lib/components/Header.svelte'
 
     import "../app.css"; 
     
@@ -16,4 +17,5 @@
 	});
   </script>
   
+  <Header/>
   <slot />
