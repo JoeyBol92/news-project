@@ -1,5 +1,19 @@
 <script>
-    import "../app.css";
+    import { onNavigate } from '$app/navigation';
+	import { page } from '$app/stores';
+
+    import "../app.css"; 
+    
+    onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
   </script>
   
   <slot />
