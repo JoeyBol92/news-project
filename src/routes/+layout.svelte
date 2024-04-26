@@ -1,11 +1,11 @@
 <script>
-    import { onNavigate } from '$app/navigation';
+	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import Header from '$lib/components/Header.svelte'
+	import Header from '$lib/components/Header.svelte';
 
-    import "../app.css"; 
-    
-    onNavigate((navigation) => {
+	import '../app.css';
+
+	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
 
 		return new Promise((resolve) => {
@@ -15,9 +15,9 @@
 			});
 		});
 	});
-  </script>
-  
-  <Header/>
-  <main id="content" class="bg-gray-50">
-  <slot />
-  </main>
+</script>
+
+<Header />
+<main id="content" class="bg-gray-50">
+	<slot />
+</main>
