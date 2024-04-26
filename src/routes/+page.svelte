@@ -26,7 +26,7 @@
 				<a href={data.acf.berichten_header[0].selecteer_bericht.slug}>
 					<div class="absolute inset-0">
 						<img
-							style={`view-transition-name:img-${data.acf.berichten_header[0].selecteer_bericht.id}`}
+							style={`view-transition-name:img-news-${data.acf.berichten_header[0].selecteer_bericht.id}`}
 							src={data.acf.berichten_header[0].selecteer_bericht._embedded['wp:featuredmedia'][0]
 								.media_details.sizes.medium_large.source_url}
 							alt={data.acf.berichten_header[0].selecteer_bericht._embedded['wp:featuredmedia'][0]
@@ -63,7 +63,7 @@
 								alt={data.acf.berichten_header[1].selecteer_bericht._embedded['wp:featuredmedia'][0]
 									.alt_text}
 								class="rounded-[24px] w-full"
-								style={`view-transition-name:img-${data.acf.berichten_header[1].selecteer_bericht.id}`}
+								style={`view-transition-name:img-news-${data.acf.berichten_header[1].selecteer_bericht.id}`}
 							/>
 							<div
 								class="absolute inset-x-0 bottom-0 py-4 px-8 bg-gradient-to-t from-black to-transparent rounded-b-[24px]"
@@ -94,7 +94,7 @@
 								alt={data.acf.berichten_header[2].selecteer_bericht._embedded['wp:featuredmedia'][0]
 									.alt_text}
 								class="rounded-[24px] w-full"
-								style={`view-transition-name:img-${data.acf.berichten_header[2].selecteer_bericht.id}`}
+								style={`view-transition-name:img-news-${data.acf.berichten_header[2].selecteer_bericht.id}`}
 							/>
 							<div
 								class="absolute inset-x-0 bottom-0 py-4 px-8 bg-gradient-to-t from-black to-transparent rounded-b-[24px]"
@@ -156,7 +156,7 @@
 										.source_url}
 									alt={article._embedded['wp:featuredmedia'][0].alt_text}
 									class="rounded-tl-[24px] rounded-bl-[24px] w-[200px] h-[150px] object-cover"
-									style={`view-transition-name:img-${article.id}`}
+									style={`view-transition-name:img-news2-${article.id}`}
 								/>
 							</div>
 							<div class="max-w-[500px] align-center">

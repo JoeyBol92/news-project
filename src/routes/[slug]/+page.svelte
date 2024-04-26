@@ -9,7 +9,7 @@
 		<div class="col-span-2 relative">
 			<div class="relative">
 				<img
-					style={`view-transition-name:img-${data.post.id}`}
+					style={`view-transition-name:img-news-${data.post.id}`}
 					src={data.post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large
 						.source_url}
 					alt={data.post._embedded['wp:featuredmedia'][0].alt_text}
