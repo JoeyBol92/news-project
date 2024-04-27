@@ -23,7 +23,7 @@
 		Terug naar nieuwsoverzicht</a
 	>
 	<div class="grid grid-cols-3 gap-x-8 justify-around">
-		<div class="col-span-2 relative">
+		<div class="col-span-3 md:col-span-2 relative">
 			<div class="relative">
 				<img
 					style={`view-transition-name:img-news-${data.post.id}`}
@@ -35,7 +35,9 @@
 				<div
 					class="absolute inset-0 flex flex-col justify-end py-4 px-8 bg-gradient-to-t from-black from-0% to-transparant to-20% rounded-b-[24px]"
 				>
-					<h1 class="text-4xl text-white font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+					<h1
+						class="text-2xl md:text-4xl text-white font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+					>
 						{@html data.post.title.rendered}
 					</h1>
 					<p class="text-white italic pt-2">
