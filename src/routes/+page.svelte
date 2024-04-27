@@ -1,4 +1,7 @@
 <script>
+	import Pagination from '$lib/components/Pagination.svelte';
+	import SEO from '$lib/components/SEO.svelte';
+
 	let contentRef;
 	// Function for Editor's pick scroll
 	const scrollTo = (scrollOffset) => {
@@ -177,6 +180,9 @@
 					</a>
 				{/each}
 			</ul>
+			<div class="mt-12 md:mt-14">
+				<Pagination currentPage={data.currentPage} pagination={data.pagination} />
+			</div>
 		</div>
 		<div class="col-span-1">Test</div>
 	</div>
