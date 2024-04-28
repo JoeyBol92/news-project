@@ -7,7 +7,7 @@ export async function load({ fetch, params, setHeaders }) {
 	});
 	// Get posts data
 	const res = await fetch(
-		`${PUBLIC_BASE_URL}/wp-json/wp/v2/posts?slug=${params.slug}&_embed&_fields=id,date,title,content,acf,_links,_embedded`
+		`${PUBLIC_BASE_URL}/wp-json/wp/v2/posts?slug=${params.slug}&_embed&_fields=id,date,title,content,acf,yoast_head_json,_links,_embedded`
 	);
 
 	const [post] = await res.json();
@@ -17,6 +17,7 @@ export async function load({ fetch, params, setHeaders }) {
 	}
 
 	return {
-		post: { ...post }
+		post: { ...post },
+		seo: post.yoast_head_json
 	};
 }

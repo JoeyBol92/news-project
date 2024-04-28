@@ -18,6 +18,8 @@
 	const optionsDate = { day: '2-digit', month: 'long', year: 'numeric' };
 </script>
 
+<SEO title={data.seo.title} description={data.seo.description} canonical={data.seo.canonical} />
+
 <section class="max-w-7xl px-[25px] mx-auto py-16 border-b">
 	<header>
 		<!-- Desktop -->

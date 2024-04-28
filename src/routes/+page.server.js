@@ -33,6 +33,7 @@ export async function load({ fetch, setHeaders, url }) {
 		currentPage: Number(page),
 		article: data,
 		acf: headerData.acf,
+		seo: headerData.yoast_head_json,
 		pagination
 	};
 }

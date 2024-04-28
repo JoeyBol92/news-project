@@ -1,8 +1,17 @@
 <script>
+	import SEO from '$lib/components/SEO.svelte';
+
 	export let data;
 	const options = { hour: 'numeric', minute: '2-digit' };
 	const optionsDate = { day: '2-digit', month: 'long', year: 'numeric' };
 </script>
+
+<SEO
+	title={data.seo.title}
+	description={data.seo.description}
+	canonical={data.seo.canoncial}
+	robots={data.seo.robots.index}
+/>
 
 <section class="max-w-7xl px-[25px] mx-auto py-16 relative">
 	<a
