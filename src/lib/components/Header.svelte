@@ -134,7 +134,7 @@
 		action="/zoeken"
 		role="search"
 	>
-		<label class="text-2xl font-bold text-gray-900" for="search">Waar bent je naar op zoek?</label>
+		<label class="text-2xl font-bold text-gray-900" for="search">Waar ben je naar op zoek?</label>
 		<div class="mt-2 flex items-center gap-x-2">
 			<input
 				id="search"

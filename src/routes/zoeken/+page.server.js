@@ -23,7 +23,7 @@ export async function load({ fetch, setHeaders, url }) {
 		const posts = await res.json();
 
 		if (posts.length === 0) {
-			throw error(404, 'Niet gevonden');
+			throw error(404, 'Geen zoekresultaten');
 		}
 
 		return {
