@@ -9,8 +9,8 @@
 <SEO
 	title={data.seo.title}
 	description={data.seo.description}
-	canonical={data.seo.canoncial}
-	robots={data.seo.robots.index}
+	canonical={data.seo.canonical}
+	robots={data.robots}
 />
 
 <section class="max-w-7xl px-[25px] mx-auto py-16 relative">

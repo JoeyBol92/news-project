@@ -18,6 +18,13 @@ export async function load({ fetch, params, setHeaders }) {
 
 	return {
 		post: { ...post },
-		seo: post.yoast_head_json
+		seo: post.yoast_head_json,
+		robots: [
+			post.yoast_head_json.robots.index,
+			post.yoast_head_json.robots.follow,
+			post.yoast_head_json.robots['max-snippet'],
+			post.yoast_head_json.robots['max-image-preview:large'],
+			post.yoast_head_json.robots['max-video-preview']
+		].join(',')
 	};
 }

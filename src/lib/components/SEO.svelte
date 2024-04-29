@@ -2,7 +2,7 @@
 	export let title = undefined;
 	export let description = undefined;
 	export let canonical = undefined;
-	export let noindex = undefined;
+	export let robots = undefined;
 </script>
 
 <svelte:head>
@@ -13,7 +13,7 @@
 	{#if canonical}
 		<link rel="canonical" href={canonical} />
 	{/if}
-	{#if noindex}
-		<meta name="robots" content="noindex" />
+	{#if robots}
+		<meta name="robots" content={robots} />
 	{/if}
 </svelte:head>
