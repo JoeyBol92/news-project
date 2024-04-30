@@ -24,7 +24,7 @@
 	<header>
 		<!-- Desktop -->
 		<h1 class="text-4xl font-bold pb-4">De beste nieuwssite evah</h1>
-		<div class="max-[767px]:hidden grid md:grid-cols-3 gap-x-8 justify-around">
+		<div class="max-[767px]:hidden grid md:grid-cols-3 gap-x-12 justify-around">
 			<div
 				class="md:col-span-2 relative transition ease-in-out hover:-translate-y-1 cursor-pointer"
 			>
@@ -246,7 +246,7 @@
 </section>
 
 <section class="max-w-7xl px-[25px] mx-auto py-16">
-	<div class="grid grid-cols-3 gap-x-8 justify-around">
+	<div class="grid grid-cols-3 gap-x-12 justify-around">
 		<div class="col-span-3 md:col-span-2">
 			<ul class=" flex flex-col gap-y-4">
 				{#each data.article as article}
@@ -287,7 +287,20 @@
 				<Pagination currentPage={data.currentPage} pagination={data.pagination} />
 			</div>
 		</div>
-		<div class="col-span-1 max-[768px]:py-16">Test</div>
+		<aside class="max-[768px]:hidden sticky top-14 block self-start">
+			<h2 class="font-bold text-2xl mb-4">Partners</h2>
+			<div class="flex flex-col gap-y-4">
+				{#each data.bannerHome as banner}
+					<a href={banner.url_banner_home.url} target={banner.url_banner_home.target}>
+						<img
+							src={banner.afbeelding_banner_home.url}
+							alt={banner.afbeelding_banner_home.alt}
+							class="rounded-[24px]"
+						/>
+					</a>
+				{/each}
+			</div>
+		</aside>
 	</div>
 </section>
 
