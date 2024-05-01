@@ -1,7 +1,6 @@
 <script>
 	export let currentPage;
 	export let pagination;
-	export let category = null;
 </script>
 
 <nav>
