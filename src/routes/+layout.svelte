@@ -2,6 +2,7 @@
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	import '../app.css';
 
@@ -21,3 +22,4 @@
 <main id="content" class="bg-gray-50">
 	<slot />
 </main>
+<Footer />

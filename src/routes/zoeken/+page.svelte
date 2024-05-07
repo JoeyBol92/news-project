@@ -64,8 +64,8 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="mt-12 md:mt-14">
-			<Pagination currentPage={data.currentPage} pagination={data.pagination} />
-		</div>
 	{/if}
+	<div class="mt-12 md:mt-14">
+		<Pagination currentPage={data.currentPage} pagination={data.pagination} />
+	</div>
 </section>

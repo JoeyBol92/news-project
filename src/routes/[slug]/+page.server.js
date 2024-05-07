@@ -12,8 +12,8 @@ export async function load({ fetch, params, setHeaders }) {
 
 	const [post] = await res.json();
 
-	if (post.data?.status === 404) {
-		error(404, 'Niet gevodnen');
+	if (!post || !post.id) {
+		error(404, 'Niet gevonden');
 	}
 
 	return {

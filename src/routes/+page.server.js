@@ -18,7 +18,7 @@ export async function load({ fetch, setHeaders, url }) {
 	const data = await res.json();
 
 	if (data.data?.status === 404) {
-		error(404, 'Niet gevodnen');
+		error(404, 'Niet gevonden');
 	}
 
 	const totalPages = res.headers.get('X-WP-TotalPages');

@@ -23,7 +23,6 @@
 <section class="max-w-7xl px-[25px] mx-auto py-16 border-b">
 	<header>
 		<!-- Desktop -->
-		<!-- <h1 class="text-4xl font-bold pb-4">De beste nieuwssite evah</h1> -->
 		<div class="max-[767px]:hidden grid md:grid-cols-3 gap-x-12 justify-around">
 			<div
 				class="md:col-span-2 relative transition ease-in-out hover:-translate-y-1 cursor-pointer"
