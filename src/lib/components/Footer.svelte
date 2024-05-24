@@ -1,5 +1,5 @@
-<footer class="max-w-7xl px-[25px] mx-auto border-t-[1px] border-[#E0E5E6]">
-	<div class="">
+<footer class="border-t-[1px] border-[#E0E5E6]">
+	<div class="max-w-7xl px-[25px] mx-auto">
 		<h2 class="sr-only">Site footer</h2>
 		<div class="grid gap-y-16 py-16 sm:grid-cols-2 lg:grid-cols-4">
 			<div>
