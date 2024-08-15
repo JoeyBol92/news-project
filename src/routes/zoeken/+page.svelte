@@ -23,7 +23,7 @@
 			>Zoek</button
 		>
 	</form>
-	{#if data.posts}
+	{#if data.posts.length > 0}
 		<div class="col-span-3 md:col-span-2 max-w-[810px] mx-auto">
 			<h2 class="font-bold text-3xl text-center pb-16">
 				Zoekresultaten voor: {data.query}
@@ -65,7 +65,17 @@
 			</ul>
 		</div>
 	{/if}
-	<div class="mt-12 md:mt-14">
-		<Pagination currentPage={data.currentPage} pagination={data.pagination} />
-	</div>
+	{#if data.posts.length > 0}
+		<div class="mt-12 md:mt-14">
+			<Pagination currentPage={data.currentPage} pagination={data.pagination} />
+		</div>
+	{/if}
+	<!-- When no results -->
+	{#if data.posts.length < 1}
+		<div class="col-span-3 md:col-span-2 max-w-[810px] mx-auto">
+			<h2 class="font-bold text-3xl text-center pb-16">
+				Geen resultaten voor: {data.query}
+			</h2>
+		</div>
+	{/if}
 </section>

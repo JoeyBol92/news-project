@@ -14,7 +14,7 @@ export async function load({ fetch, setHeaders, url }) {
 		const page = parseInt(url.searchParams.get('page')) || 1;
 		// const page = url.searchParams.get('page') ?? '1';
 		const res = await fetch(
-			`${PUBLIC_BASE_URL}/wp-json/wp/v2/posts?search=${query}&per_page=20&page=${page}&_fields=id,date,slug,type,title,excerpt,acf,_links,_embedded&_embed`
+			`${PUBLIC_BASE_URL}/wp-json/wp/v2/posts?search=${query}&per_page=15&page=${page}&_fields=id,date,slug,type,title,excerpt,acf,_links,_embedded&_embed`
 		);
 
 		const totalPages = res.headers.get('X-WP-TotalPages');
@@ -22,9 +22,9 @@ export async function load({ fetch, setHeaders, url }) {
 
 		const posts = await res.json();
 
-		if (posts.length === 0) {
-			throw error(404, 'Geen zoekresultaten');
-		}
+		// if (posts.length === 0) {
+		// 	throw error(404, 'Geen zoekresultaten');
+		// }
 
 		return {
 			query,
